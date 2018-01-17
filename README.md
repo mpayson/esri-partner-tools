@@ -17,5 +17,3 @@ Startups working with Esri and ArcGIS implement many common workflows. The [ArcG
 ## Getting Started
 
 *See the README in each directory*
-
-* [build_org](/build-org/README.md)
