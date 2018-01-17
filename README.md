@@ -26,10 +26,8 @@ Startups working with Esri and ArcGIS implement many common workflows. The [ArcG
 
 *See the README in each directory*
 
-## Issues
+## Issues & Contributing
 
 Want to request a new sample? Have a question? Would [__love__](https://github.com/mpayson/startup-python-tools/issues) to hear from you!
 
-## Contributing
-
-PRs always welcome!
+And PRs always welcome!
