@@ -7,7 +7,7 @@ Startups working with Esri and ArcGIS implement many common workflows. The [ArcG
 
 ## Contents
 
-* [`build_org/`](/build-org) - Automate new ArcGIS Online deployments by cloning a template organization
+* [`build_org/`](/build_org) - Automate new ArcGIS Online deployments by cloning a template organization
   * [`clone_groups.ipynb`](/build-org/clone_groups.ipynb) - Jupyter Notebook to clone groups and their items
   * [`configure_org.ipynb`](/build-org/configure_org.ipynb) - Jupyter Notebook to customize org UI & add users
 * [`utils/`](/utils) - Common functions that I've found helpful
