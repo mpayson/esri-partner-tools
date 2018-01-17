@@ -12,12 +12,15 @@ Startups working with Esri and ArcGIS implement many common workflows. The [ArcG
 
 ## Contents
 
-* [`build_org/`](/build_org) - Automate new ArcGIS Online deployments by cloning a template organization
-  * [`clone_groups.ipynb`](/build-org/clone_groups.ipynb) - Jupyter Notebook to clone groups and their items
-  * [`configure_org.ipynb`](/build-org/configure_org.ipynb) - Jupyter Notebook to customize org UI & add users
 * [`utils/`](/utils) - Common functions that I've found helpful
   * [`clone_utils.py`](/utils/clone_utils.py) - Functions to assist with cloning groups & items
   * [`user_utils.py`](/utils/user_utils.py) - Functions to assist with adding users
+* [`build_org/`](/build_org) - Automate new ArcGIS Online deployments by cloning a template organization
+  * [`clone_groups.ipynb`](/build-org/clone_groups.ipynb) - Jupyter Notebook to clone groups and their items
+  * [`configure_org.ipynb`](/build-org/configure_org.ipynb) - Jupyter Notebook to customize org UI & add users
+* [`bulk_csv/`](/bulk_csv) - Upload a lot of CSVs
+  * [`bulk_csv_upload.ipynb`](/bulk_csv/bulk_csv_upload.ipynb) - Jupyter Notebook to upload a folder of CSVs to [hosted feature layers](https://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm) in your GIS
+
 
 ## Getting Started
 
