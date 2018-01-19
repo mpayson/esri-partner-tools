@@ -28,6 +28,6 @@ Startups working with Esri and ArcGIS implement many common workflows. The [ArcG
 
 ## Issues & Contributing
 
-Want to request a new sample? Have a question? Would [__love__](https://github.com/mpayson/startup-python-tools/issues) to hear from you!
+Want to request a new sample? Have a question? Would [__love__](https://github.com/mpayson/startup-python-tools/issues) to hear from you.
 
 And PRs always welcome!
