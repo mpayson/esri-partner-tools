@@ -18,9 +18,9 @@ Startups working with Esri and ArcGIS implement many common workflows. The [ArcG
 * [`build_org/`](/build_org) - Automate new ArcGIS Online deployments by cloning a template organization
   * [`clone_groups.ipynb`](/build_org/clone_groups.ipynb) - Jupyter Notebook to clone groups and their items
   * [`configure_org.ipynb`](/build_org/configure_org.ipynb) - Jupyter Notebook to customize org UI & add users
-* [`bulk_ops/`](/bulk_csv) - Common bulk operations
-  * [`bulk_csv_upload.ipynb`](/bulk_csv/bulk_csv_upload.ipynb) - Jupyter Notebook to upload a folder of CSVs to [hosted feature layers](https://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm) in your GIS
-  * [`bulk_shapefile_upload.ipynb`](/bulk_shp/bulk_shapefile_upload.ipynb) - Jupyter Notebook to upload a folder of Shapefiles to [hosted feature layers](https://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm) in your GIS
+* [`bulk_ops/`](/bulk_ops) - Common bulk operations
+  * [`bulk_csv_upload.ipynb`](/bulk_ops/bulk_csv_upload.ipynb) - Jupyter Notebook to upload a folder of CSVs to [hosted feature layers](https://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm) in your GIS
+  * [`bulk_shapefile_upload.ipynb`](/bulk_ops/bulk_shapefile_upload.ipynb) - Jupyter Notebook to upload a folder of Shapefiles to [hosted feature layers](https://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm) in your GIS
 
 
 ## Getting Started
