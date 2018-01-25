@@ -20,6 +20,8 @@ Startups working with Esri and ArcGIS implement many common workflows. The [ArcG
   * [`configure_org.ipynb`](/build_org/configure_org.ipynb) - Jupyter Notebook to customize org UI & add users
 * [`bulk_csv/`](/bulk_csv) - Upload a lot of CSVs
   * [`bulk_csv_upload.ipynb`](/bulk_csv/bulk_csv_upload.ipynb) - Jupyter Notebook to upload a folder of CSVs to [hosted feature layers](https://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm) in your GIS
+* [`bulk_shp/`](/bulk_csv) - Upload a lot of Shapefiles
+  * [`bulk_shapefile_upload.ipynb`](/bulk_shp/bulk_shapefile_upload.ipynb) - Jupyter Notebook to upload a folder of Shapefiles to [hosted feature layers](https://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm) in your GIS
 
 
 ## Getting Started
