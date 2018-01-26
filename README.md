@@ -19,7 +19,8 @@ Startups working with Esri and ArcGIS implement many common workflows. The [ArcG
   * [`clone_groups.ipynb`](/build_org/clone_groups.ipynb) - Jupyter Notebook to clone groups and their items
   * [`configure_org.ipynb`](/build_org/configure_org.ipynb) - Jupyter Notebook to customize org UI & add users
 * [`bulk_ops/`](/bulk_ops) - Common bulk operations
-  * [`bulk_csv_upload.ipynb`](/bulk_ops/bulk_csv_upload.ipynb) - Jupyter Notebook to upload a folder of CSVs to [hosted feature layers](https://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm) in your GIS
+  * [`bulk_csv_upload.ipynb`](/bulk_ops/bulk_csv_upload.ipynb) - Jupyter Notebook to upload a folder of `csv`s to [hosted feature layers](https://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm) in your GIS
+  * [`bulk_csv_geocode.ipynb`](/bulk_ops/bulk_csv_geocode.ipynb) - Jupyter Notebook to [geocode](https://developers.arcgis.com/features/geocoding/) rows in a `csv` file
   * [`bulk_shapefile_upload.ipynb`](/bulk_ops/bulk_shapefile_upload.ipynb) - Jupyter Notebook to upload a folder of Shapefiles to [hosted feature layers](https://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm) in your GIS
 
 
