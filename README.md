@@ -23,7 +23,7 @@ Startups working with Esri and ArcGIS implement many common workflows. The [ArcG
   * [`bulk_csv_upload.ipynb`](/bulk_ops/bulk_csv_upload.ipynb) - Jupyter Notebook to upload a folder of `csv`s to [hosted feature layers](https://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm) in your GIS
   * [`bulk_csv_geocode.ipynb`](/bulk_ops/bulk_csv_geocode.ipynb) - Jupyter Notebook to [geocode](https://developers.arcgis.com/features/geocoding/) rows in a `csv` file
   * [`bulk_shapefile_upload.ipynb`](/bulk_ops/bulk_shapefile_upload.ipynb) - Jupyter Notebook to upload a folder of Shapefiles to [hosted feature layers](https://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm) in your GIS
-  * [`bulk_standard_geometry.ipynb`](/bulk_ops/bulk_standard_geometry) - Jupyter Notebook to enrich [standard geography](https://developers.arcgis.com/rest/geoenrichment/api-reference/standard-geography-query.htm) ids, such as `census block group ids
+  * [`bulk_standard_geometry.ipynb`](/bulk_ops/bulk_standard_geometry.ipynb) - Jupyter Notebook to enrich [standard geography](https://developers.arcgis.com/rest/geoenrichment/api-reference/standard-geography-query.htm) ids, such as `census block group ids
   `, with their geometries
 
 
