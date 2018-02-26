@@ -1,9 +1,9 @@
-# Startup Python Tools
-> Useful tools for Esri Startups built with the [ArcGIS API for Python](https://developers.arcgis.com/python/)
+# Partner Python Tools
+> Useful tools for Esri Partners built with the [ArcGIS API for Python](https://developers.arcgis.com/python/)
 
 ## About
 
-Startups working with Esri and ArcGIS implement many common workflows. The [ArcGIS API for Python](https://developers.arcgis.com/python/) is an awesome automation library. This repo is meant to be a collection of POC scripts to automate some of these workflows.
+Partners working with Esri and ArcGIS implement many common workflows. The [ArcGIS API for Python](https://developers.arcgis.com/python/) is an awesome automation library. This repo is meant to be a collection of POC scripts to automate some of these workflows.
 
 ## Prerequisites
 
