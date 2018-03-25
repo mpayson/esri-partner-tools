@@ -19,10 +19,10 @@ Partners working with Esri and ArcGIS implement many common workflows. The [ArcG
 * **[`common_ops/`](/common_ops) - Common operations**
   * [`add_to_definition.ipynb`](/common_ops/add_to_definition.ipynb) - update operations such as _adding indexes_, _adding fields_, and more
 * **[`bulk_ops/`](/bulk_ops) - Common bulk operations**
-  * [`bulk_csv_upload.ipynb`](/bulk_ops/bulk_csv_upload.ipynb) - upload a folder of `csv`s to [hosted feature layers](https://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm) in your GIS
-  * [`bulk_csv_geocode.ipynb`](/bulk_ops/bulk_csv_geocode.ipynb) - [geocode](https://developers.arcgis.com/features/geocoding/) rows in a `csv` file
-  * [`bulk_shapefile_upload.ipynb`](/bulk_ops/bulk_shapefile_upload.ipynb) - upload a folder of Shapefiles to [hosted feature layers](https://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm) in your GIS
-  * [`bulk_standard_geography.ipynb`](/bulk_ops/bulk_standard_geography.ipynb) - enrich [standard geography](https://developers.arcgis.com/rest/geoenrichment/api-reference/standard-geography-query.htm) ids, such as `census blocks`, with geometries
+  * [`csv_upload.ipynb`](/bulk_ops/csv_upload.ipynb) - upload a folder of `csv`s to [hosted feature layers](https://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm) in your GIS
+  * [`csv_geocode.ipynb`](/bulk_ops/csv_geocode.ipynb) - [geocode](https://developers.arcgis.com/features/geocoding/) rows in a `csv` file
+  * [`shapefile_upload.ipynb`](/bulk_ops/shapefile_upload.ipynb) - upload a folder of Shapefiles to [hosted feature layers](https://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm) in your GIS
+  * [`standard_geography.ipynb`](/bulk_ops/standard_geography.ipynb) - enrich [standard geography](https://developers.arcgis.com/rest/geoenrichment/api-reference/standard-geography-query.htm) ids, such as `census blocks`, with geometries
 * **[`build_org/`](/build_org) - Automate new ArcGIS Online deployments by cloning a template organization**
   * [`clone_groups.ipynb`](/build_org/clone_groups.ipynb) - clone groups and their items
   * [`configure_org.ipynb`](/build_org/configure_org.ipynb) - customize org UI & add users
