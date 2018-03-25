@@ -17,7 +17,7 @@ Partners working with Esri and ArcGIS implement many common workflows. The [ArcG
   * [`user_utils.py`](/utils/user_utils.py) - assist with adding users
   * [`cool_utils.py`](/utils/cool_utils.py) - functions I want to remember and hopefully you will too!
 * **[`common_ops/`](/common_ops) - Common operations**
-  * [`add_to_definition.ipynb`](/common_ops/add_to_definition.ipynb) - update operations such as _adding indexes_, _adding fields_, and more
+  * [`add_to_definition.ipynb`](/common_ops/add_to_definition.ipynb) - updates such as _adding indexes_, _adding fields_, and more
 * **[`bulk_ops/`](/bulk_ops) - Common bulk operations**
   * [`csv_upload.ipynb`](/bulk_ops/csv_upload.ipynb) - upload a folder of `csv`s to [hosted feature layers](https://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm) in your GIS
   * [`csv_geocode.ipynb`](/bulk_ops/csv_geocode.ipynb) - [geocode](https://developers.arcgis.com/features/geocoding/) rows in a `csv` file
