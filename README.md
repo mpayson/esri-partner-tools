@@ -13,17 +13,17 @@ Startups working with Esri and ArcGIS implement many common workflows. The [ArcG
 ## Contents
 
 * [`utils/`](/utils) - Common functions that I've found helpful
-  * [`clone_utils.py`](/utils/clone_utils.py) - Functions to assist with cloning groups & items
-  * [`user_utils.py`](/utils/user_utils.py) - Functions to assist with adding users
-  * [`cool_utils.py`](/utils/cool_utils.py) - Functions that I want to remember and hopefully you will too!
+  * [`clone_utils.py`](/utils/clone_utils.py) - assist with cloning groups & items
+  * [`user_utils.py`](/utils/user_utils.py) - assist with adding users
+  * [`cool_utils.py`](/utils/cool_utils.py) - functions I want to remember and hopefully you will too!
 * [`build_org/`](/build_org) - Automate new ArcGIS Online deployments by cloning a template organization
-  * [`clone_groups.ipynb`](/build_org/clone_groups.ipynb) - Jupyter Notebook to clone groups and their items
-  * [`configure_org.ipynb`](/build_org/configure_org.ipynb) - Jupyter Notebook to customize org UI & add users
+  * [`clone_groups.ipynb`](/build_org/clone_groups.ipynb) - clone groups and their items
+  * [`configure_org.ipynb`](/build_org/configure_org.ipynb) - customize org UI & add users
 * [`bulk_ops/`](/bulk_ops) - Common bulk operations
-  * [`bulk_csv_upload.ipynb`](/bulk_ops/bulk_csv_upload.ipynb) - Jupyter Notebook to upload a folder of `csv`s to [hosted feature layers](https://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm) in your GIS
-  * [`bulk_csv_geocode.ipynb`](/bulk_ops/bulk_csv_geocode.ipynb) - Jupyter Notebook to [geocode](https://developers.arcgis.com/features/geocoding/) rows in a `csv` file
-  * [`bulk_shapefile_upload.ipynb`](/bulk_ops/bulk_shapefile_upload.ipynb) - Jupyter Notebook to upload a folder of Shapefiles to [hosted feature layers](https://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm) in your GIS
-  * [`bulk_standard_geography.ipynb`](/bulk_ops/bulk_standard_geography.ipynb) - Jupyter Notebook to enrich [standard geography](https://developers.arcgis.com/rest/geoenrichment/api-reference/standard-geography-query.htm) ids, such as `census block group ids
+  * [`bulk_csv_upload.ipynb`](/bulk_ops/bulk_csv_upload.ipynb) - upload a folder of `csv`s to [hosted feature layers](https://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm) in your GIS
+  * [`bulk_csv_geocode.ipynb`](/bulk_ops/bulk_csv_geocode.ipynb) - [geocode](https://developers.arcgis.com/features/geocoding/) rows in a `csv` file
+  * [`bulk_shapefile_upload.ipynb`](/bulk_ops/bulk_shapefile_upload.ipynb) - upload a folder of Shapefiles to [hosted feature layers](https://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm) in your GIS
+  * [`bulk_standard_geography.ipynb`](/bulk_ops/bulk_standard_geography.ipynb) - enrich [standard geography](https://developers.arcgis.com/rest/geoenrichment/api-reference/standard-geography-query.htm) ids, such as `census block group ids
   `, with their geometries
 
 
