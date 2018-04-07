@@ -2,6 +2,7 @@
 *DS_STORE
 *test.csv
 test/
+test_data/
 .vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
