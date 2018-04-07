@@ -21,8 +21,8 @@ Partners working with Esri and ArcGIS implement many common workflows. The [ArcG
 * **[`bulk_ops/`](/bulk_ops) - Common bulk operations**
   * [`csv_upload.ipynb`](/bulk_ops/csv_upload.ipynb) - upload a folder of `csvs` & `dataframes` to [hosted feature layers](https://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm)
   * [`shapefile_upload.ipynb`](/bulk_ops/shapefile_upload.ipynb) - upload a folder of `Shapefiles` to [hosted feature layers](https://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm)
-  * [`csv_geocode.ipynb`](/bulk_ops/csv_geocode.ipynb) - [geocode](https://developers.arcgis.com/features/geocoding/) rows in `csvs` and `dataframes`
   * [`append_data.ipynb`](/bulk_ops/append_data.ipynb) - create & append `csvs` & `dataframes` to [hosted feature layers](https://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm)
+  * [`csv_geocode.ipynb`](/bulk_ops/csv_geocode.ipynb) - [geocode](https://developers.arcgis.com/features/geocoding/) rows in `csvs` and `dataframes`
   * [`standard_geography.ipynb`](/bulk_ops/standard_geography.ipynb) - enrich [standard geography](https://developers.arcgis.com/rest/geoenrichment/api-reference/standard-geography-query.htm) ids, such as `census blocks`, with geometries
 * **[`build_org/`](/build_org) - Automate new ArcGIS Online deployments by cloning a template organization**
   * [`clone_groups.ipynb`](/build_org/clone_groups.ipynb) - clone groups and their items
