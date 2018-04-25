@@ -17,8 +17,8 @@ Partners working with Esri and ArcGIS implement many common workflows. The [ArcG
   * [`user_utils.py`](/utils/user_utils.py) - assist with adding users
   * [`cool_utils.py`](/utils/cool_utils.py) - functions I want to remember and hopefully you will too!
 * **[`common/`](/common) - Common workflows with the Python API**
-  * [`csv_geocode.ipynb`](/common_ops/csv_geocode.ipynb) - [geocode](https://developers.arcgis.com/features/geocoding/) rows in `csvs` and `dataframes`
-  * [`standard_geography.ipynb`](/common_ops/standard_geography.ipynb) - enrich [standard geography](https://developers.arcgis.com/rest/geoenrichment/api-reference/standard-geography-query.htm) ids, such as `census blocks`, with geometries
+  * [`csv_geocode.ipynb`](/common/csv_geocode.ipynb) - [geocode](https://developers.arcgis.com/features/geocoding/) rows in `csvs` and `dataframes`
+  * [`standard_geography.ipynb`](/common/standard_geography.ipynb) - enrich [standard geography](https://developers.arcgis.com/rest/geoenrichment/api-reference/standard-geography-query.htm) ids, such as `census blocks`, with geometries
 * **[`feature_layers/`](/feature_layers) - Common operations with [hosted feature layers](https://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm)**
   * [`csv_upload.ipynb`](/feature_layers/csv_upload.ipynb) - upload a folder of `csvs` & `dataframes`
   * [`shapefile_upload.ipynb`](/feature_layers/shapefile_upload.ipynb) - upload a folder of `Shapefiles`
