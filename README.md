@@ -26,10 +26,10 @@ Partners working with Esri and ArcGIS implement many common workflows. The [ArcG
 ## Contents
 
 * **[`partnerutils/`](/partnerutils) - Functions that I've found helpful**
-  * [`cool_utils.py`](/utils/cool_utils.py) - functions I want to remember and hopefully you will too!
-  * [`user_utils.py`](/utils/user_utils.py) - assist with adding users
-  * [`clone_utils.py`](/utils/clone_utils.py) - assist with cloning groups & items
-  * [`feature_utils.py`](utils/feature_utils.py) - assist with features and feature data types
+  * [`cool_utils.py`](/partnerutils/cool_utils.py) - functions I want to remember and hopefully you will too!
+  * [`user_utils.py`](/partnerutils/user_utils.py) - assist with adding users
+  * [`clone_utils.py`](/partnerutils/clone_utils.py) - assist with cloning groups & items
+  * [`feature_utils.py`](partnerutils/feature_utils.py) - assist with features and feature data types
 * **[`common/`](/common) - Common workflows with the Python API**
   * [`csv_geocode.ipynb`](/common/csv_geocode.ipynb) - [geocode](https://developers.arcgis.com/features/geocoding/) rows in `csvs` and `dataframes`
   * [`standard_geography.ipynb`](/common/standard_geography.ipynb) - enrich [standard geography](https://developers.arcgis.com/rest/geoenrichment/api-reference/standard-geography-query.htm) ids, such as `census blocks`, with geometries
