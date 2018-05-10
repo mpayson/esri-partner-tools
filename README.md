@@ -16,7 +16,7 @@
 
 ## About
 
-Partners working with Esri and ArcGIS implement many common workflows. The [ArcGIS API for Python](https://developers.arcgis.com/python/) is an awesome automation library. This repo is meant to be a collection of POC scripts to automate some of these workflows.
+Partners working with Esri and ArcGIS implement many common workflows. The [ArcGIS API for Python](https://developers.arcgis.com/python/) is an awesome automation library. This repo is meant to be a collection of POC scripts to automate some of these workflows. While much of the code is in Jupyter Notebooks, it can easily be ported to pure python to run on the server or as headless apps.
 
 ## Prerequisites
 
@@ -32,6 +32,7 @@ Partners working with Esri and ArcGIS implement many common workflows. The [ArcG
   * [`feature_utils.py`](partnerutils/feature_utils.py) - assist with features and feature data types
 * **[`common/`](/common) - Common workflows with the Python API**
   * [`csv_geocode.ipynb`](/common/csv_geocode.ipynb) - [geocode](https://developers.arcgis.com/features/geocoding/) rows in `csvs` and `dataframes`
+  * [`share_to_groups.ipynb`](/common/share_to_groups.ipynb) - share content to your users via [groups](https://doc.arcgis.com/en/arcgis-online/share-maps/groups.htm) without cloning the data
   * [`standard_geography.ipynb`](/common/standard_geography.ipynb) - enrich [standard geography](https://developers.arcgis.com/rest/geoenrichment/api-reference/standard-geography-query.htm) ids, such as `census blocks`, with geometries
 * **[`feature_layers/`](/feature_layers) - Common operations with [hosted feature layers](https://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm)**
   * [`csv_upload.ipynb`](/feature_layers/csv_upload.ipynb) - upload a folder of `csvs` & `dataframes`
@@ -39,9 +40,10 @@ Partners working with Esri and ArcGIS implement many common workflows. The [ArcG
   * [`append_data.ipynb`](/feature_layers/append_data.ipynb) - append data from `csvs` & `dataframes`
   * [`manage_fields.ipynb`](/feature_layers/manage_fields.ipynb) - view and edit fields
   * [`manage_indexes.ipynb`](/feature_layers/manage_indexes.ipynb) - view, edit, and refresh indexes
-* **[`build_org/`](/build_org) - Automate new ArcGIS Online deployments by cloning a template organization**
+* **[`build_org/`](/build_org) - Automate new ArcGIS Online deployments**
   * [`clone_groups.ipynb`](/build_org/clone_groups.ipynb) - clone groups and their items
   * [`configure_org.ipynb`](/build_org/configure_org.ipynb) - customize org UI & add users
+  * [`create_share_group.ipynb`](/build_org/create_share_group.ipynb) - create a [group](https://doc.arcgis.com/en/arcgis-online/share-maps/groups.htm) and invite members to share content with your users
 
 ## Getting Started
 
