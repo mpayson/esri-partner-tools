@@ -1,5 +1,18 @@
 # Partner Python Tools
+
 > Useful tools for Esri Partners built with the [ArcGIS API for Python](https://developers.arcgis.com/python/)
+
+<details>
+  <summary> Contents
+  </summary>
+
+* [About](#about)
+* [Prerequisites](#prerequisites)
+* [Contents](#contents)
+* [Getting Started](#getting-started)
+* [Issues and Contributing](#issues-and-contributing)
+
+</details>
 
 ## About
 
@@ -8,14 +21,15 @@ Partners working with Esri and ArcGIS implement many common workflows. The [ArcG
 ## Prerequisites
 
 * Install the [ArcGIS API for Python](https://developers.arcgis.com/python/) ([instructions](https://developers.arcgis.com/python/guide/install-and-set-up/))
-* Access to [Jupyter Notebooks](http://jupyter.org/) (included with ArcGIS Python API __TBD?__ )
+* Access to [Jupyter Notebooks](http://jupyter.org/)
 
 ## Contents
 
-* **[`utils/`](/utils) - Functions that I've found helpful**
-  * [`clone_utils.py`](/utils/clone_utils.py) - assist with cloning groups & items
-  * [`user_utils.py`](/utils/user_utils.py) - assist with adding users
+* **[`partnerutils/`](/partnerutils) - Functions that I've found helpful**
   * [`cool_utils.py`](/utils/cool_utils.py) - functions I want to remember and hopefully you will too!
+  * [`user_utils.py`](/utils/user_utils.py) - assist with adding users
+  * [`clone_utils.py`](/utils/clone_utils.py) - assist with cloning groups & items
+  * [`feature_utils.py`](utils/feature_utils.py) - assist with features and feature data types
 * **[`common/`](/common) - Common workflows with the Python API**
   * [`csv_geocode.ipynb`](/common/csv_geocode.ipynb) - [geocode](https://developers.arcgis.com/features/geocoding/) rows in `csvs` and `dataframes`
   * [`standard_geography.ipynb`](/common/standard_geography.ipynb) - enrich [standard geography](https://developers.arcgis.com/rest/geoenrichment/api-reference/standard-geography-query.htm) ids, such as `census blocks`, with geometries
@@ -29,12 +43,19 @@ Partners working with Esri and ArcGIS implement many common workflows. The [ArcG
   * [`clone_groups.ipynb`](/build_org/clone_groups.ipynb) - clone groups and their items
   * [`configure_org.ipynb`](/build_org/configure_org.ipynb) - customize org UI & add users
 
-
 ## Getting Started
 
-*See the README in each directory*
+Many samples use [`partnerutils`](/partnerutils). To use this package, either copy & paste the functions as specified in each notebook OR:
 
-## Issues & Contributing
+1. `$ git clone https://github.com/mpayson/partner-python-tools.git`
+2. `$ cd partner-python-tools`
+3. `$ pip install -e .`
+
+This will install a [local package](https://stackoverflow.com/questions/19048732/python-setup-py-develop-vs-install). As it turns out, top-level utils are [annoying](https://stackoverflow.com/questions/34478398/import-local-function-from-a-module-housed-in-another-directory-with-relative-im) and I've been using these functions in other projects.
+
+Otherwise, the notebooks should give enough detail to get started. If not, [holler](https://github.com/mpayson/startup-python-tools/issues)!
+
+## Issues and Contributing
 
 Want to request a new sample? Have a question? Would [__love__](https://github.com/mpayson/startup-python-tools/issues) to hear from you.
 
