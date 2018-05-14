@@ -1,4 +1,4 @@
-# Partner Python Tools
+# Esri Partner Tools
 
 > Useful tools for Esri Partners built with the [ArcGIS API for Python](https://developers.arcgis.com/python/)
 
