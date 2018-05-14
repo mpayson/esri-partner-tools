@@ -13,14 +13,16 @@ def search_item_title(target, title):
             return s_item
     return None
 
-def search_group_title(target, title):
+def search_group_title(target, title, **kwargs):
     """search org for an existing group with title
 
     args:
     target -- target GIS to search
     group -- group with title to search
+    **kwargs -- all additional arguments described here
+    https://esri.github.io/arcgis-python-api/apidoc/html/arcgis.gis.toc.html#arcgis.gis.GroupManager.search
     """
-    s_items = target.groups.search(title)
+    s_items = target.groups.search(title, **kwargs)
     for s_item in s_items:
         if s_item.title == title:
             return s_item
