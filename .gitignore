@@ -4,6 +4,7 @@ client_server
 *test.csv
 test/
 test_data/
+stage/
 .vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
