@@ -1,6 +1,6 @@
 # Esri Partner Tools
 
-> Useful tools for Esri Partners built with the [ArcGIS API for Python](https://developers.arcgis.com/python/)
+> Common Partner workflows, automated.
 
 <details>
   <summary> Contents
@@ -16,14 +16,16 @@
 
 ## About
 
-Partners working with Esri and ArcGIS implement many common workflows. The [ArcGIS API for Python](https://developers.arcgis.com/python/) is an awesome automation library. This repo is meant to be a collection of POC scripts to automate some of these workflows. While much of the code is in Jupyter Notebooks, it can easily be ported to pure python to run on the server or as headless apps.
+Partners working with Esri and ArcGIS implement many common workflows. This repo is meant to demonstrate tools and approaches to automate these workflows, from Jupyter Notebooks to simple applications.
 
 ## Prerequisites
 
 * Install the [ArcGIS API for Python](https://developers.arcgis.com/python/) ([instructions](https://developers.arcgis.com/python/guide/install-and-set-up/))
 * Access to [Jupyter Notebooks](http://jupyter.org/)
 
-## Contents
+## Python
+
+> Useful notebooks for Esri Partners built with the [ArcGIS API for Python](https://developers.arcgis.com/python/)
 
 * **[`partnerutils/`](/partnerutils) - Functions that I've found helpful**
   * [`cool_utils.py`](/partnerutils/cool_utils.py) - functions I want to remember and hopefully you will too!
@@ -46,6 +48,15 @@ Partners working with Esri and ArcGIS implement many common workflows. The [ArcG
   * [`create_share_group.ipynb`](/build_org/create_share_group.ipynb) - create a [group](https://doc.arcgis.com/en/arcgis-online/share-maps/groups.htm) and invite members to share content with your users
   * [`register_application.ipynb`](/build_org/register_application.ipynb) automatically create and [register an app](https://developers.arcgis.com/documentation/core-concepts/security-and-authentication/signing-in-arcgis-online-users/)
 
+*Note* While much of the code is in Jupyter Notebooks, it can easily be ported to pure python to run on the server or as headless apps.
+
+## Client Server
+
+> Modular components built with React and Flask
+
+* App [component](/client_server/client/src/App.js) - Simple OAuth 2.0 with [arcgis-rest-js](https://esri.github.io/arcgis-rest-js/),[React](https://reactjs.org/), and [react-router](https://github.com/ReactTraining/react-router) 
+* Register [component](/client_server/client/src/components/Register.js) & [blueprint](/client_server/server/api/register.py) - Set up and show workflows to write to a user's GIS
+
 ## Getting Started
 
 Many samples use [`partnerutils`](/partnerutils). To use this package, either copy & paste the functions as specified in each notebook OR:
@@ -56,7 +67,7 @@ Many samples use [`partnerutils`](/partnerutils). To use this package, either co
 
 This will install a [local package](https://stackoverflow.com/questions/19048732/python-setup-py-develop-vs-install). As it turns out, top-level utils are [annoying](https://stackoverflow.com/questions/34478398/import-local-function-from-a-module-housed-in-another-directory-with-relative-im) and I've been using these functions in other projects.
 
-Otherwise, the notebooks should give enough detail to get started. If not, [holler](https://github.com/mpayson/esri-partner-tools/issues)!
+Otherwise, the notebooks and sub-`READMEs` should give enough detail to get started. If not, [holler](https://github.com/mpayson/esri-partner-tools/issues)!
 
 ## Issues and Contributing
 

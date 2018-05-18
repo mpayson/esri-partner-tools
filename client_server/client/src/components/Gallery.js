@@ -31,7 +31,7 @@ const Gallery = ({isAuth, onSignIn}) => {
             </figure>
             <div className="card-content">
               <Link className={linkClass} to="/register">Register Demo</Link>
-              <p className="font-size--1">Set up and show workflows to communicate with a user's GIS</p>
+              <p className="font-size--1">Set up and show workflows to write to a user's GIS</p>
             </div>
           </div>
         </div>
