@@ -59,7 +59,7 @@ Partners working with Esri and ArcGIS implement many common workflows. This repo
 
 ## Getting Started
 
-### General
+#### General
 
 Many samples use [`partnerutils`](/partnerutils). To use this package, either copy & paste the functions as specified in each notebook OR:
 
@@ -69,11 +69,11 @@ Many samples use [`partnerutils`](/partnerutils). To use this package, either co
 
 This will install a [local package](https://stackoverflow.com/questions/19048732/python-setup-py-develop-vs-install). As it turns out, top-level utils are [annoying](https://stackoverflow.com/questions/34478398/import-local-function-from-a-module-housed-in-another-directory-with-relative-im) and I've been using these functions in other projects.
 
-### Python Samples
+#### Python Samples
 
 Hopefully, the Notebooks should give enough detail to get started. If not, [holler](https://github.com/mpayson/esri-partner-tools/issues)!
 
-### Client Server Samples
+#### Client Server Samples
 
 See the [`README!`](/client_server/)
 
