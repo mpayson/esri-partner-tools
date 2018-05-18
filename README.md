@@ -16,7 +16,7 @@
 
 ## About
 
-Partners working with Esri and ArcGIS implement many common workflows. This repo is meant to demonstrate tools and approaches to automate these workflows, from Jupyter Notebooks to simple applications.
+Partners working with Esri and ArcGIS implement many common workflows. This repo is meant to demonstrate tools and approaches, from Jupyter Notebooks to simple applications, to automate some of these.
 
 ## Prerequisites
 
@@ -52,12 +52,14 @@ Partners working with Esri and ArcGIS implement many common workflows. This repo
 
 ## Client Server
 
-> Modular components built with React and Flask
+> Modular components built with React and Flask, [**more**](/client_server)
 
-* App [component](/client_server/client/src/App.js) - Simple OAuth 2.0 with [arcgis-rest-js](https://esri.github.io/arcgis-rest-js/),[React](https://reactjs.org/), and [react-router](https://github.com/ReactTraining/react-router) 
-* Register [component](/client_server/client/src/components/Register.js) & [blueprint](/client_server/server/api/register.py) - Set up and show workflows to write to a user's GIS
+* **App ([component](/client_server/client/src/App.js))** - Simple OAuth 2.0 with [arcgis-rest-js](https://esri.github.io/arcgis-rest-js/),[React](https://reactjs.org/), and [react-router](https://github.com/ReactTraining/react-router)
+* **Register ([component](/client_server/client/src/components/Register.js) & [blueprint](/client_server/server/api/register.py))** - Set up and show workflows to write to a user's GIS
 
 ## Getting Started
+
+### General
 
 Many samples use [`partnerutils`](/partnerutils). To use this package, either copy & paste the functions as specified in each notebook OR:
 
@@ -67,7 +69,13 @@ Many samples use [`partnerutils`](/partnerutils). To use this package, either co
 
 This will install a [local package](https://stackoverflow.com/questions/19048732/python-setup-py-develop-vs-install). As it turns out, top-level utils are [annoying](https://stackoverflow.com/questions/34478398/import-local-function-from-a-module-housed-in-another-directory-with-relative-im) and I've been using these functions in other projects.
 
-Otherwise, the notebooks and sub-`READMEs` should give enough detail to get started. If not, [holler](https://github.com/mpayson/esri-partner-tools/issues)!
+### Python Samples
+
+Hopefully, the Notebooks should give enough detail to get started. If not, [holler](https://github.com/mpayson/esri-partner-tools/issues)!
+
+### Client Server Samples
+
+See the [`README!`](/client_server/)
 
 ## Issues and Contributing
 

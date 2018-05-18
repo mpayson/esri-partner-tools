@@ -32,5 +32,5 @@ Note, for now these connect through the create-react-app development [proxy](htt
 
 ## Contents
 
-* App [component](/client_server/client/src/App.js) - Simple OAuth 2.0 with [arcgis-rest-js](https://esri.github.io/arcgis-rest-js/),[React](https://reactjs.org/), and [react-router](https://github.com/ReactTraining/react-router) 
-* Register [component](/client_server/client/src/components/Register.js) & [blueprint](/client_server/server/api/register.py) - Set up and show workflows to write to a user's GIS
+* **App ([component](/client_server/client/src/App.js)) - Simple OAuth 2.0 with [arcgis-rest-js](https://esri.github.io/arcgis-rest-js/),[React](https://reactjs.org/), and [react-router](https://github.com/ReactTraining/react-router)**
+* **Register ([component](/client_server/client/src/components/Register.js) & [blueprint](/client_server/server/api/register.py)) - Set up and show workflows to write to a user's GIS**
