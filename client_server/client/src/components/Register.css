@@ -1,0 +1,40 @@
+.msg-window { 
+  padding: 60px;
+  max-width:600px;
+  margin:20vh auto;
+  text-align: center;
+  /* box-shadow: 2px 2px 3px #888888;
+  background-color: #ffffff; */
+}
+
+.msg-background {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #052942;
+}
+
+.indicator {
+  animation: rotation 1s infinite linear;
+  -webkit-animation: rotation 1s infinite linear;
+  margin-right: 7px;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(359deg);
+  }
+}
+
+@-webkit-keyframes rotation {
+  from {
+      -webkit-transform: rotate(0deg);
+  }
+  to {
+      -webkit-transform: rotate(359deg);
+  }
+}
