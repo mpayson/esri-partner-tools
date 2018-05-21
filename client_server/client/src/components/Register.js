@@ -1,6 +1,19 @@
 import React, { Component } from 'react';
 import './Register.css';
 
+const GROUPSCHEMA = {
+  "title": "My Test Title",
+  "tags": "test, group, poc, scripts",
+  "description": "Test group for partner python scripts",
+  "access": 'private',
+  "is_invitation_only": true,
+  "users_update_items": false
+}
+
+const ITEMID = "10e55acd450241e2a1c5592680016a39"
+const GROUPID = "33e71c31b6094035881136d0c104369d"
+
+
 const getStatusItem = (status, text) => {
   const doneClass = "icon-ui-checkbox-checked icon-ui-green"
   const pendClass = "icon-ui-checkbox-unchecked icon-ui-gray text-dark-gray"
@@ -19,7 +32,7 @@ const getStatusItem = (status, text) => {
 
 const actionText = {
   "create": "Create & share a group",
-  "share": "Share an item",
+  "share": "Publish & share an item",
   "clone": "Clone an item"
 }
 
@@ -50,7 +63,8 @@ class Register extends Component {
     })
     const data = {
       token: this.props.session.token,
-      username: this.props.session.username
+      username: this.props.session.username,
+      schema: GROUPSCHEMA
     };
     fetch('/register/group', {
       method: 'POST',
@@ -59,13 +73,36 @@ class Register extends Component {
         'Content-Type': 'application/json'
       })
     }).then(res => res.json())
-    .then(rjson => this.setState({
-      "create": "done",
-      "result": rjson.groupId
-      // "result": rjson.username
-    }))
+    .then(rjson => {
+      this.setState({
+        "create": "done",
+      })
+      this.publishItem(rjson.groupId)
+    })
 
   }
+
+  publishItem(groupId){
+    this.setState({"share": "active"})
+    const data = {
+      token: this.props.session.token,
+      username: this.props.session.username,
+      action: 'publish',
+      itemIds: [ITEMID]
+    }
+    fetch(`/register/group/${groupId}`, {
+      method: 'PUT',
+      body: JSON.stringify(data),
+      headers: new Headers({
+        'Content-Type': 'application/json'
+      })
+    }).then(res => res.json())
+    .then(rjson => this.setState({
+      "share": "done",
+      "result": rjson.groupId
+    }))
+  }
+
   // shareItem(){
   //   this.setState({"share": "active"})
   //   setTimeout(() => {
@@ -87,7 +124,7 @@ class Register extends Component {
   render(){
     const btnClass = this.state.working ? "btn btn-disabled" : "btn";
     const footer = this.state.result
-      ? <h3><a target="_blank" href={`https://arcgis.com/home/group.html?id=${this.state.result}`}>Check it out!</a></h3>
+      ? <h3><a target="_blank" href={`https://arcgis.com/home/group.html?id=${this.state.result}&token=${this.props.session.token}`}>Check it out!</a></h3>
       : <button className={btnClass} onClick={this.onGoClick}>Go!</button>
 
     return (
@@ -98,8 +135,8 @@ class Register extends Component {
               <h1>Let's get you started!</h1>
               <ul className="list-plain">
                 {getStatusItem(this.state["create"], actionText["create"])}
-                {/* {getStatusItem(this.state["share"], actionText["share"])}
-                {getStatusItem(this.state["clone"], actionText["clone"])} */}
+                {getStatusItem(this.state["share"], actionText["share"])}
+                {/*{getStatusItem(this.state["clone"], actionText["clone"])} */}
               </ul>
               {footer}
             </div>

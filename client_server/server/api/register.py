@@ -8,21 +8,10 @@ import requests
 import json
 from flask import Blueprint, jsonify, request
 from partnerutils.clone_utils import search_group_title
-from arcgis.gis import GIS
+from arcgis.gis import GIS, Item
 
 # URL to accept group invitation
 ACCEPT_URL = '{0}community/users/{1}/invitations/{2}/accept'
-
-# GROUP template configurations
-group_title = 'My Test {0}'
-group_schema = {
-    "title": "My Test Title",
-    "tags": "test, group, poc, scripts",
-    "description": "Test group for partner python scripts",
-    "access": 'private',
-    "is_invitation_only": True,
-    "users_update_items": False
-}
 
 def create_register_bp(gis):
     """Define the blueprint
@@ -35,19 +24,19 @@ def create_register_bp(gis):
 
     @bp.route("/group", methods=['POST'])
     def create_group():
-        """Create and share a group with the end-user"""
+        """Create and share a default group with the end-user"""
         jform = request.get_json()
         token = jform['token']
+        schema = jform['schema']
 
         # construct GIS object from client-side token
         u_gis = GIS(token=token)
         
-        schema = dict(group_schema)
 
         # this is cool, urlKey is unique AND trusted because it's derived from ArcGIS token
         # I THINK you could use this to check organizational access in your own system
         # but don't quote me (definitely not a security expert)
-        schema["title"] = group_title.format(u_gis.properties['urlKey'])
+        schema["title"] = schema["title"] + " " + u_gis.properties['urlKey']
 
         # get group, create if it doesn't exist
         group = search_group_title(gis, schema["title"])
@@ -70,6 +59,35 @@ def create_register_bp(gis):
         # respond
         return jsonify(r_dict)
 
-    # @bp.route("/group")
+    @bp.route("/group/<groupid>", methods=['PUT'])
+    def modify_group(groupid):
+        """Update a group by publishing or cloning items to that group"""
+        jform = request.get_json()
+        token = jform['token']
+        action = jform['action']
+        item_ids = jform['itemIds']
+        item_map = jform.pop('itemMap', None)
+
+        # construct GIS object from client-side token
+        u_gis = GIS(token=token)
+        
+        items = [Item(gis, i) for i in item_ids]
+        item_res = {}
+        if action == 'publish':
+            for i in items:
+                i_clone = 
+                i_pub = i.publish()
+                title = i_pub.title + " " + u_gis.properties['urlKey']
+                i_pub.update(item_properties={'title': title})
+                i_pub.share(groups=groupid)
+                item_res[i.id] = i_pub.id
+            return jsonify({'itemMap': item_res})
+            
+            
+
+
+
+
+
 
     return bp
