@@ -10,8 +10,8 @@ const GROUPSCHEMA = {
   "users_update_items": false
 }
 
-const ITEMID = "10e55acd450241e2a1c5592680016a39"
-const GROUPID = "33e71c31b6094035881136d0c104369d"
+const ITEMID = "90dffd24537240a59eede871ade5856a"
+const APPID = "33e71c31b6094035881136d0c104369d"
 
 
 const getStatusItem = (status, text) => {
@@ -77,7 +77,7 @@ class Register extends Component {
       this.setState({
         "create": "done",
       })
-      this.publishItem(rjson.groupId)
+      // this.publishItem(rjson.groupId)
     })
 
   }
@@ -88,7 +88,7 @@ class Register extends Component {
       token: this.props.session.token,
       username: this.props.session.username,
       action: 'publish',
-      itemIds: [ITEMID]
+      copyIds: [ITEMID]
     }
     fetch(`/register/group/${groupId}`, {
       method: 'PUT',

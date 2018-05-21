@@ -7,11 +7,14 @@ This would be helpful during a "registration" stage when you're wiring up your u
 import requests
 import json
 from flask import Blueprint, jsonify, request
-from partnerutils.clone_utils import search_group_title
+from partnerutils.clone_utils import search_group_title, clone_items_modify, search_item_title
 from arcgis.gis import GIS, Item
 
 # URL to accept group invitation
 ACCEPT_URL = '{0}community/users/{1}/invitations/{2}/accept'
+
+# Name template:
+NAME_TEMPLATE = '{0} {1}'
 
 def create_register_bp(gis):
     """Define the blueprint
@@ -40,8 +43,10 @@ def create_register_bp(gis):
 
         # get group, create if it doesn't exist
         group = search_group_title(gis, schema["title"])
-        if group is None:
-            group = gis.groups.create_from_dict(schema)
+        if group is not None:
+            return jsonify({"WARNING": "Using existing group", "groupId": group.id})
+
+        group = gis.groups.create_from_dict(schema)
 
         # invite end-user to group
         un = u_gis.users.me.username
@@ -64,30 +69,39 @@ def create_register_bp(gis):
         """Update a group by publishing or cloning items to that group"""
         jform = request.get_json()
         token = jform['token']
-        action = jform['action']
-        item_ids = jform['itemIds']
+        copy_ids = jform.pop('copyIds', None)
+        clone_ids = jform.pop('cloneIds', None)
         item_map = jform.pop('itemMap', None)
 
         # construct GIS object from client-side token
         u_gis = GIS(token=token)
-        
-        items = [Item(gis, i) for i in item_ids]
         item_res = {}
-        if action == 'publish':
-            for i in items:
-                i_clone = 
-                i_pub = i.publish()
-                title = i_pub.title + " " + u_gis.properties['urlKey']
-                i_pub.update(item_properties={'title': title})
-                i_pub.share(groups=groupid)
-                item_res[i.id] = i_pub.id
-            return jsonify({'itemMap': item_res})
-            
-            
 
+        # callback to update title and make unique to organization
+        m_callback = lambda item, t_gis: {"title": NAME_TEMPLATE.format(item.title, u_gis.properties['urlKey'])}
 
+        # create replica then share to group, used to grant end-users access to template items but to maintain ownership
+        copy_res = {}
+        if copy_ids:
+            copy_items = [Item(gis, i) for i in copy_ids]
 
+            paste_items = clone_items_modify(copy_items, gis, modify_item_callback=m_callback,
+                                              copy_data=False, search_existing_items=False, item_mapping=item_map)
+            paste_share_res = [i.share(groups=groupid) for i in paste_items]
 
+            item_res['copyIds'] = [i.id for i in paste_items]
+
+        # clone replica to end-user org then share to group, used to grant access and ownership to template items
+        if clone_ids:
+            clone_items = [Item(gis, i) for i in copy_ids]
+            clones = clone_items_modify(clone_items, u_gis, modify_item_callback=m_callback,
+                                              copy_data=False, search_existing_items=False, item_mapping=item_map)
+
+            clone_share_res = [i.share(groups=groupid) for i in clones]
+
+            item_res['copyIds'] = [i.id for i in clones]
+
+        return jsonify(item_res)
 
 
     return bp

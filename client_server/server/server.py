@@ -6,7 +6,7 @@ from api.register import create_register_bp
 
 app = Flask(__name__, static_url_path='/', static_folder='client/build')
 
-gis = GIS(username=agol_unpw['un'], password=agol_unpw['pw'],  profile="client_server")
+gis = GIS(profile="client_server")
 app.register_blueprint(create_register_bp(gis), url_prefix="/api/register")
 
 # @app.route("/organization")
