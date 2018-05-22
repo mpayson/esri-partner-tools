@@ -1,0 +1,2 @@
+let clientId = '<CLIENT ID>';
+export default clientId;
