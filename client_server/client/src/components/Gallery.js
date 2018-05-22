@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import registerImg from '../assets/register.png';
+import distributeImg from '../assets/distribute.png';
 
 const Gallery = ({isAuth, onSignIn}) => {
   const linkClass = isAuth ? "avenir-bold font-size-2" : "avenir-bold font-size-2 not-active link-light-gray";
@@ -27,11 +27,11 @@ const Gallery = ({isAuth, onSignIn}) => {
         <div className="block-group block-group-3-up">
           <div className="card block">
             <figure className="card-image-wrap">
-              <img className="card-image" src={registerImg} alt="Bridge Club, 1954"/>
+              <img className="card-image" src={distributeImg} alt="Bridge Club, 1954"/>
             </figure>
             <div className="card-content">
-              <Link className={linkClass} to="/register">Register Demo</Link>
-              <p className="font-size--1">Set up and show workflows to write to a user's GIS</p>
+              <Link className={linkClass} to="/register">Distribute Demo</Link>
+              <p className="font-size--1">Wire and show workflows that distribute content to a user</p>
             </div>
           </div>
         </div>

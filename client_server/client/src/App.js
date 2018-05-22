@@ -3,7 +3,7 @@ import {UserSession} from '@esri/arcgis-rest-auth';
 import { Route, Switch, Link, Redirect } from "react-router-dom";
 import PrivateRoute from './components/common/PrivateRoute';
 import Gallery from './components/Gallery';
-import Register from './components/Register';
+import Distribute from './components/Distribute';
 import clientId from './config';
 import './App.css';
 
@@ -80,7 +80,7 @@ class App extends Component {
 
         <Switch>
           <Route exact path="/" render={(props) => <Gallery {...props} isAuth={isAuth} onSignIn={this.handleLogin}/>}/>
-          <PrivateRoute path="/register" render={(props) => <Register {...props} session={this.state.session}/>} avail={isAuth}/>
+          <PrivateRoute path="/register" render={(props) => <Distribute {...props} session={this.state.session}/>} avail={isAuth}/>
         </Switch>
 
       </div>
