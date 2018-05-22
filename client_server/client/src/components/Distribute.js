@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './Register.css';
+import './Distribute.css';
 
 // CONSTANTS THAT DEFINE SET UP BEHAVIOR
 const GROUPSCHEMA = {
