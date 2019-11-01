@@ -1,7 +1,7 @@
 """utility functions to assist with features and feature data types"""
 
 from arcgis.geometry import SpatialReference, Point
-from arcgis.features import SpatialDataFrame
+import pandas as pd
 
 def sdf_from_xyz(df, x_col, y_col, z_col=None, sr=None):
     """builds a SpatialDataFrame from DataFrame with
@@ -16,7 +16,7 @@ def sdf_from_xyz(df, x_col, y_col, z_col=None, sr=None):
     """
 
     if not z_col:
-        return SpatialDataFrame.from_xy(df, x_col, y_col, sr)
+        return pd.DataFrame.spatial.from_xy(df, x_col, y_col, sr)
     
     def point_for_row(x, y, z, sr):
         return Point({'x' : x, 'y' : y, 'z': z, "spatialReference" : sr})
@@ -28,5 +28,6 @@ def sdf_from_xyz(df, x_col, y_col, z_col=None, sr=None):
                                                 row[y_col],
                                                 row[z_col],
                                                 sr), axis=1)
-    return SpatialDataFrame(data=df, geometry=df_geom, sr=sr)
+    sdf = df.spatial.set_geometry(df_geom, sr=sr)
+    return sdf
 
