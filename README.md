@@ -58,6 +58,12 @@ This will install a [local package](https://stackoverflow.com/questions/19048732
 
 Otherwise, the notebooks should give enough detail to get started. If not, [holler](https://github.com/mpayson/esri-partner-tools/issues)!
 
+## Sample Data
+
+I included some sample data for testing and trialing:
+* [`NYC_Restaurant_Inspections.csv`](/sample_data/NYC_Restaurant_Inspections.csv) - a slice of DOHMH New York City Restaurant Inspection Results. [Source](https://data.cityofnewyork.us/Health/DOHMH-New-York-City-Restaurant-Inspection-Results/43nn-pn8j])
+* [`sample_census_tract_geoid.csv`](/sample_data/sample_census_tract_geoid.csv) - a couple census tract geoids. Copied from [here](https://geo.nyu.edu/catalog/nyu-2451-34513)
+
 ## Issues and Contributing
 
 Want to request a new sample? Have a question? Would [__love__](https://github.com/mpayson/esri-partner-tools/issues) to hear from you.
