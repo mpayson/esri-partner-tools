@@ -33,6 +33,7 @@ Partners working with Esri and ArcGIS implement many common workflows. The [ArcG
   * [`feature_utils.py`](partnerutils/feature_utils.py) - assist with features and feature data types
 * **[`common_workflows/`](/common_workflows) - Common workflows with the Python API**
   * [`csv_geocode.ipynb`](/common_workflows/csv_geocode.ipynb) - [geocode](https://developers.arcgis.com/features/geocoding/) rows in `csvs` and `dataframes`
+  * [`vector_data_products`](/common_workflows/vector_data_products.ipynb) - end-to-end workflows for managing vector content and derivative information products
   * [`distribute_items.ipynb`](/common_workflows/distribute_items.ipynb) - common patterns for distributing items to another organization
   * [`standard_geography.ipynb`](/common_workflows/standard_geography.ipynb) - enrich [standard geography](https://developers.arcgis.com/rest/geoenrichment/api-reference/standard-geography-query.htm) ids, such as `census blocks`, with geometries
 * **[`feature_layers/`](/feature_layers) - Common operations with [hosted feature layers](https://doc.arcgis.com/en/arcgis-online/share-maps/hosted-web-layers.htm)**
