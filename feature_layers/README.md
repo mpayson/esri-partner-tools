@@ -4,7 +4,8 @@
 
 * [`csv_upload.ipynb`](/feature_layers/csv_upload.ipynb) - upload a folder of `csvs` & `dataframes`
 * [`shapefile_upload.ipynb`](/feature_layers/shapefile_upload.ipynb) - upload a folder of `Shapefiles`
-* [`append_data.ipynb`](/feature_layers/append_data.ipynb) - append data from `csvs` & `dataframes`
-  * [`create_views.ipynb`](/feature_layers/create_views.ipynb) - create database views with separate permissions against one authoritative layer
+* [`geojson_upload.ipynb`](/feature_layers/geojson_upload.ipynb) - upload a geojson file
+* [`update_data.ipynb`](/feature_layers/update_data.ipynb) - a couple different workflows for updating uploaded / hosted data
+* [`create_views.ipynb`](/feature_layers/create_views.ipynb) - create database views with separate permissions against one authoritative layer
 * [`manage_fields.ipynb`](/feature_layers/manage_fields.ipynb) - view and edit fields
 * [`manage_indexes.ipynb`](/feature_layers/manage_indexes.ipynb) - view, edit, and refresh indexes
