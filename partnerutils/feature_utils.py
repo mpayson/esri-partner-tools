@@ -31,3 +31,32 @@ def sdf_from_xyz(df, x_col, y_col, z_col=None, sr=None):
     sdf = df.spatial.set_geometry(df_geom, sr=sr)
     return sdf
 
+
+def row_to_geojson(row, lon_field, lat_field):
+    """returns a geojson feature for a flat dictionary
+    
+    args:
+    row -- dictionary with values
+    lon_field -- longitude dictionary key
+    lat_field -- latitude dictionary key"""
+    return {
+        'type': 'Feature',
+        'geometry': {
+            'type': 'Point',
+            'coordinates': [row[lat_field], row[lon_field]]
+        },
+        'properties': {**row}
+    }
+
+def rows_to_geojson(rows, lon_field, lat_field):
+    """returns a geojson feature collection for a list of flat dictionary rows
+    
+    args:
+    rows -- list of dictionaries with values
+    lon_field -- longitude dictionary key
+    lat_field -- latitude dictionary key"""
+    features = [row_to_geojson(r, lon_field, lat_field) for r in rows]
+    return {
+        'type': 'FeatureCollection',
+        'features': features
+    }
