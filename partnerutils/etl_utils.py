@@ -127,7 +127,7 @@ def create_scratch_layer(gis, geojson, uid_field=None, **item_options):
   
     return lyr_item
 
-def get_existing_item(gis, tags):
+def get_existing_item(gis, tags=None):
     """Searches for an existing layer item and returns it
     
     Note, for now this just assumes there's just one layer item for the tags
