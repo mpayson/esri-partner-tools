@@ -71,6 +71,7 @@ def append_to_layer(gis, layer, geojson, uid_field=None):
         result = layer.append(
             item_id=item.id,
             upload_format="geojson",
+            upsert=(uid_field != None),
             upsert_matching_field=uid_field # update existing features with matching uid_fields
         )
     finally:
@@ -91,7 +92,9 @@ def create_layer(gis, geojson, template_item):
     item = results[0]
     lyr = item.layers[0]
 
-    return append_to_layer(gis, lyr, geojson)
+    append_to_layer(gis, lyr, geojson)
+
+    return item
 
 
 def create_scratch_layer(gis, geojson, uid_field=None, **item_options):
