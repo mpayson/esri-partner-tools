@@ -22,9 +22,24 @@ def timestamp_to_ags(timestamp):
     args:
     timestamp -- timestamp in milliseconds since epoch"""
     seconds = timestamp / 1000
-    tz = datetime.timezone.utc
     date = datetime.datetime.fromtimestamp(seconds)
     return date_to_ags(date)
+
+def _add_unique_index(layer, field):
+    """Adds a unique index for upsert operations to update, or avoid duplicating, existing rows
+
+    args:
+    layer -- where to add the index
+    field -- the field to index
+    """
+    new_index = {
+        "name": "External UID",
+        "fields": field,
+        "isUnique": True,
+        "description": "External UID for upsert operations"
+    }
+    add_dict = {"indexes" : [new_index]}
+    return layer.manager.add_to_definition(add_dict)
 
 def add_geojson(gis, geojson, **item_options):
     """Uploads geojson and returns the file item
@@ -67,7 +82,13 @@ def append_to_layer(gis, layer, geojson, uid_field=None):
 
     item = add_geojson(gis, geojson, title="Dataminr update")
     result = None
+
     try:
+        # if there's a uid_field make sure it's indexed before append
+        indexes = layer.properties.indexes
+        if uid_field and not any(i['fields'] == uid_field for i in indexes):
+            _add_unique_index(layer, uid_field)
+            
         result = layer.append(
             item_id=item.id,
             upload_format="geojson",
@@ -96,7 +117,6 @@ def create_layer(gis, geojson, template_item):
 
     return item
 
-
 def create_scratch_layer(gis, geojson, uid_field=None, **item_options):
     """Publishes geojson as a hosted service and returns the layer item
 
@@ -118,15 +138,8 @@ def create_scratch_layer(gis, geojson, uid_field=None, **item_options):
     
     # add a unique index for upsert operations so don't duplicate rows
     if uid_field:
-        new_index = {
-          "name": "External UID",
-          "fields": uid_field,
-          "isUnique": True,
-          "description": "External UID for upsert operations"
-        } 
-        add_dict = {"indexes" : [new_index]}
         lyr = lyr_item.layers[0]
-        lyr.manager.add_to_definition(add_dict)
+        _add_unique_index(lyr, uid_field)
   
     return lyr_item
 
