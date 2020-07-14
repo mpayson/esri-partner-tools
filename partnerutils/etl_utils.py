@@ -1,5 +1,5 @@
 """********************************************
-* A couple utility functions for working with ArcGIS
+* A couple ETL utility functions for working with ArcGIS
 ********************************************"""
 import tempfile
 import json
