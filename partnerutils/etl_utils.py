@@ -88,7 +88,7 @@ def append_to_layer(gis, layer, geojson, uid_field=None):
         indexes = layer.properties.indexes
         if uid_field and not any(i['fields'] == uid_field for i in indexes):
             _add_unique_index(layer, uid_field)
-            
+
         result = layer.append(
             item_id=item.id,
             upload_format="geojson",
@@ -155,3 +155,25 @@ def get_existing_item(gis, tags=None):
     search_items = gis.content.search('tags:"{0}" AND type:"Feature Service"'.format(t))
     
     return search_items[0] if len(search_items) > 0 else None
+
+def delete_before(lyr, date, field):
+    """Deletes all features in a layer before a given date
+
+    args:
+    lyr -- the feature layer with features to delete
+    date -- the date before which to delete features
+    field -- the date field"""
+    where = "{0} < '{1}'".format(field, date_to_ags(date))
+    return lyr.delete_features(where=where)
+
+def delete_before_days(lyr, number_days, field):
+    """Deletes all features with dates before the specified
+    number of days back from today
+
+    args:
+    lyr -- the feature layer with features to delete
+    number_days -- the number of days back before which to delete features
+    field -- the date field
+    """
+    dt = datetime.datetime.today() - datetime.timedelta(number_days)
+    return delete_before(lyr, dt, field)
