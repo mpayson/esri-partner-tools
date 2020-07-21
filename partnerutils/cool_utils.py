@@ -2,6 +2,7 @@
 
 import glob
 import os
+import json
 import pandas as pd
 
 def chunk(row, n=1000):
@@ -67,3 +68,52 @@ def d_extract(obj, keys_delimited, **kwargs):
     keys -- a '.' delimited string of keys to drill through"""
     keys = keys_delimited.split('.')
     return extract(obj, keys, **kwargs)
+
+def read_json(path):
+    """Read in a JSON file as a dictionary
+    
+    args:
+    path - path to the JSON file"""
+    if os.path.exists(path):
+        with open(path, 'r') as f:
+            return json.load(f)
+    return {}
+
+def write_json(path, obj):
+    """Write a dictionary to a file
+
+    args:
+    path -- path to the output JSON file
+    obj -- dictionary to write"""
+    with open(path, 'w') as f:
+        json.dump(obj, f)
+
+def memoize(f):
+    """Decorator to memoize function calls that receive a list
+    as their first argument, useful to avoid expensive operations
+    
+    args:
+    f -- the function to memoize"""
+
+    cache = {}
+
+    def execute(input_list, *args, **kwargs):
+        cache_path = kwargs.pop('cache_path', None)
+        get_key = kwargs.pop('get_key', lambda i: str(i))
+        
+        if cache_path:
+            cache.update(read_json(cache_path))
+
+        process = [i for i in input_list if get_key(i) not in cache]
+
+        if len(process) > 0:
+            results = f(process, *args, **kwargs)
+            for i, p in enumerate(process):
+                cache[get_key(p)] = results[i]
+
+        if cache_path:
+            write_json(cache_path, cache)
+
+        return [cache[get_key(i)] for i in input_list]
+
+    return execute
