@@ -104,7 +104,13 @@ def memoize(f):
         if cache_path:
             cache.update(read_json(cache_path))
 
-        process = [i for i in input_list if get_key(i) not in cache]
+        keys = set()
+        process = []
+        for i in input_list:
+            key = get_key(i)
+            if key not in cache and key not in keys:
+                process.append(i)
+                keys.add(key)
 
         if len(process) > 0:
             results = f(process, *args, **kwargs)
