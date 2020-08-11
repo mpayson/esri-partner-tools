@@ -43,7 +43,7 @@ def row_to_geojson(row, lon_field, lat_field):
         'type': 'Feature',
         'geometry': {
             'type': 'Point',
-            'coordinates': [row[lat_field], row[lon_field]]
+            'coordinates': [row[lon_field], row[lat_field]]
         },
         'properties': {**row}
     }
