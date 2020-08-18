@@ -55,13 +55,21 @@ Partners working with Esri and ArcGIS implement many common workflows. The [ArcG
 
 Many samples use [`partnerutils`](/partnerutils). To use this package, either copy & paste the functions as specified in each notebook OR:
 
-1. `$ git clone https://github.com/mpayson/esri-partner-tools.git`
-2. `$ cd esri-partner-tools`
-3. `$ pip install -e .`
+1. `$ pip install -q -U git+https://github.com/mpayson/esri-partner-tools`
 
-This will install a [local package](https://stackoverflow.com/questions/19048732/python-setup-py-develop-vs-install). As it turns out, top-level utils are [annoying](https://stackoverflow.com/questions/34478398/import-local-function-from-a-module-housed-in-another-directory-with-relative-im) and I've been using these functions in other projects.
+This will install the `partnerutils` as a local package in your active environment. The utilities can then be used as follows
 
-Otherwise, the notebooks should give enough detail to get started. If not, [holler](https://github.com/mpayson/esri-partner-tools/issues)!
+```python
+from arcgis.gis import GIS
+from partnerutils.processing_utils import batch_geocode_memo
+
+gis = GIS(username="username", password="password")
+addresses = ['El Burrito Redlands CA', '380 New York St Redlands CA']
+results = batch_geocode_memo(addresses)
+print(results)
+```
+
+Shout out to Ryan @ SafeGraph for showing me this is [a thing](https://github.com/SafeGraphInc/safegraph_py). Otherwise, the notebooks should give enough detail to get started. If not, **[holler](https://github.com/mpayson/esri-partner-tools/issues)**!
 
 ## Sample Data
 
