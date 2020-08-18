@@ -55,7 +55,7 @@ Partners working with Esri and ArcGIS implement many common workflows. The [ArcG
 
 Many samples use [`partnerutils`](/partnerutils). To use this package, either copy & paste the functions as specified in each notebook OR:
 
-1. `$ pip install -q -U git+https://github.com/mpayson/esri-partner-tools`
+> `$ pip install -q -U git+https://github.com/mpayson/esri-partner-tools`
 
 This will install the `partnerutils` as a local package in your active environment. The utilities can then be used as follows
 
