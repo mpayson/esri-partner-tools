@@ -17,7 +17,10 @@
 
 ## About
 
-Partners working with Esri and ArcGIS implement many common workflows. The [ArcGIS API for Python](https://developers.arcgis.com/python/) is an awesome automation library. This repo is meant to be a collection of POC scripts to automate some of these workflows. While much of the code is in Jupyter Notebooks, it can easily be ported to pure python to run on the server or as headless apps.
+Partners working with Esri and ArcGIS implement many common workflows. The [ArcGIS API for Python](https://developers.arcgis.com/python/) is an awesome automation library. This repo is meant to be a collection of POC scripts to automate some of these workflows.
+
+While much of the code is in Jupyter Notebooks, it can easily be ported to pure python to run on the server or as headless apps. [`partnerutils/`](/partnerutils) can also be installed as a local package:
+> `$ pip install -q -U git+https://github.com/mpayson/esri-partner-tools`
 
 ## Prerequisites
 
@@ -27,7 +30,6 @@ Partners working with Esri and ArcGIS implement many common workflows. The [ArcG
 ## Contents
 
 * **[`partnerutils/`](/partnerutils) - Functions that I've found helpful**
-  * `$ pip install -q -U git+https://github.com/mpayson/esri-partner-tools # local package`
   * [`cool_utils.py`](/partnerutils/cool_utils.py) - functions I want to remember and hopefully you will too!
   * [`etl_utils.py`](/partnerutils/etl_utils.py) - assist with common ETL logic
   * [`user_utils.py`](/partnerutils/user_utils.py) - assist with adding users
