@@ -26,7 +26,7 @@ Partners working with Esri and ArcGIS implement many common workflows. The [ArcG
 
 ## Contents
 
-* **[`partnerutils/`](/partnerutils) - Functions that I've found helpful**
+* **[`partnerutils/`](/partnerutils) - Functions that I've found helpful** [`$ pip install -q -U git+https://github.com/mpayson/esri-partner-tools`]
   * [`cool_utils.py`](/partnerutils/cool_utils.py) - functions I want to remember and hopefully you will too!
   * [`etl_utils.py`](/partnerutils/etl_utils.py) - assist with common ETL logic
   * [`user_utils.py`](/partnerutils/user_utils.py) - assist with adding users
