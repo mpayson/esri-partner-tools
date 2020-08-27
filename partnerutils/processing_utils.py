@@ -2,7 +2,7 @@
 * A couple utility functions to help with processing data
 ********************************************"""
 from arcgis.geocoding import batch_geocode
-from .cool_utils import memoize, chunk
+from partnerutils.cool_utils import memoize, chunk
 
 @memoize
 def batch_geocode_memo(addresses, **kwargs):

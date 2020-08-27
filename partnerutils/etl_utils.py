@@ -55,7 +55,7 @@ def add_geojson(gis, geojson, **item_options):
     tags = item_options.pop('tags', DEFAULT_TAG)
         
     # save geojson to tempfile and add as item
-    with tempfile.NamedTemporaryFile(mode="w", suffix='.geojson') as fp:
+    with tempfile.NamedTemporaryFile(mode="w", suffix='.json') as fp:
         fp.write(json.dumps(geojson))
         item = gis.content.add({
             **item_options,
