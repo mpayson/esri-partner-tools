@@ -80,7 +80,7 @@ def append_to_layer(gis, layer, geojson, uid_field=None):
     uid_field -- identifies existing features to update with new features (must be uniquely indexed)
     """
 
-    item = add_geojson(gis, geojson, title="Dataminr update")
+    item = add_geojson(gis, geojson, title="Data update")
     result = None
 
     try:
