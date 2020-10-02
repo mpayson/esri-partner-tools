@@ -1,6 +1,5 @@
 import threading
 import sys
-#import arcpy  
 import requests
 import json
 from datetime import datetime
