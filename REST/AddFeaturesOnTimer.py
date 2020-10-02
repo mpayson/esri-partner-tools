@@ -1,5 +1,6 @@
 import threading
-import arcpy  
+import sys
+#import arcpy  
 import requests
 import json
 from datetime import datetime
@@ -9,12 +10,12 @@ from datetime import datetime
 requests.packages.urllib3.disable_warnings()
 
 # Get Parameters
-addfsURL = arcpy.GetParameterAsText(0)
-interval = int(arcpy.GetParameterAsText(1))
-deviceID = int(arcpy.GetParameterAsText(2))
-quantity = int(arcpy.GetParameterAsText(3))
-username = arcpy.GetParameterAsText(4)
-password = arcpy.GetParameterAsText(5)
+addfsURL = str(sys.argv[1])
+interval = int(sys.argv[2])
+deviceID = int(sys.argv[3])
+quantity = int(sys.argv[4])
+username = str(sys.argv[5])
+password = str(sys.argv[6])
 
 # Generate Token
 tokenURL = 'https://www.arcgis.com/sharing/rest/generateToken'
