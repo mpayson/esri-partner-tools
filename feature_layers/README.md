@@ -9,3 +9,4 @@
 * [`create_views.ipynb`](/feature_layers/create_views.ipynb) - create database views with separate permissions against one authoritative layer
 * [`manage_fields.ipynb`](/feature_layers/manage_fields.ipynb) - view and edit fields
 * [`manage_indexes.ipynb`](/feature_layers/manage_indexes.ipynb) - view, edit, and refresh indexes
+* [`enable_time.ipynb`](/feature_layers/enable_time.ipynb) - add time metadata that will be reflected in ArcGIS app UIs
