@@ -48,6 +48,7 @@ While much of the code is in Jupyter Notebooks, it can easily be ported to pure 
   * [`create_views.ipynb`](/feature_layers/create_views.ipynb) - create database views with separate permissions against one authoritative layer
   * [`manage_fields.ipynb`](/feature_layers/manage_fields.ipynb) - view and edit fields
   * [`manage_indexes.ipynb`](/feature_layers/manage_indexes.ipynb) - view, edit, and refresh indexes
+  * [`enable_time.ipynb`](/feature_layers/enable_time.ipynb) - add time metadata that will be reflected in ArcGIS app UIs
 * **[`build_org/`](/build_org) - Automate new ArcGIS Online deployments**
   * [`clone_groups.ipynb`](/build_org/clone_groups.ipynb) - clone groups and their items
   * [`configure_org.ipynb`](/build_org/configure_org.ipynb) - customize org UI, create groups, & add users
