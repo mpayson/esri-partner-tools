@@ -6,4 +6,4 @@ ArcGIS Online account
 Hosted data table with fields 'pk', 'amount', 'datetime1'
 
 Usage:
-AddFeaturesOnTimer.py 'URL of the hosted table' 'interval (sec)' 'ID' 'Value' 'My User Name' 'My Password'
+* AddFeaturesOnTimer.py 'URL of the hosted table' 'interval (sec)' 'ID' 'Value' 'My User Name' 'My Password'
