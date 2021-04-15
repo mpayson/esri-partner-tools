@@ -109,7 +109,7 @@ def create_layer(gis, geojson, template_item):
     geojson -- initial geojson to populate the layer
     template_item -- existing Item that has been pre-configured with desired properties"""
 
-    results = gis.content.clone_items([template_item], copy_data=False)
+    results = gis.content.clone_items([template_item], copy_data=False, search_existing_items=False)
     item = results[0]
     lyr = item.layers[0]
 
